@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Природные явления — засуха, метель и наводнение</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f3e8;color:#2c2a25;line-height:1.65}
+header{background:linear-gradient(135deg,#74502d,#ad792e,#d9aa52);color:#fff;text-align:center;padding:58px 18px}
+header h1{font-size:clamp(32px,5vw,52px);margin:0 0 10px}
+header p{font-size:19px;margin:0}
+nav{position:sticky;top:0;z-index:10;background:#49321f;padding:12px 8px;text-align:center;box-shadow:0 3px 12px #0003}
+nav a{display:inline-block;color:#fff;text-decoration:none;margin:6px 9px;font-weight:bold;font-size:15px}
+nav a:hover{color:#ffe3a3}
+section{max-width:1120px;margin:auto;padding:54px 20px;scroll-margin-top:70px}
+.hero{text-align:center}
+.hero h2,.section-title{color:#74502d}
+.hero h2{font-size:clamp(27px,4vw,36px)}
+.hero p{max-width:900px;margin:auto;font-size:18px}
+.section-title{text-align:center;font-size:clamp(27px,4vw,34px);margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:20px}
+.card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 5px 16px #00000014}
+.card h3{color:#946126;margin-top:0}
+.steps{display:grid;gap:15px}
+.step{background:#fff;border-left:5px solid #b8863b;padding:18px 22px;border-radius:10px;box-shadow:0 3px 10px #00000010}
+.step strong{color:#74502d}
+.safe{background:#fff8e8;padding:26px;border-radius:18px;box-shadow:0 5px 16px #00000012}
+.notice{background:#fff0c9;border-left:5px solid #ce941c;padding:16px 20px;border-radius:10px;margin-top:20px}
+.btn{display:inline-block;background:#946126;color:#fff;border:0;padding:11px 19px;margin:10px 5px 0;border-radius:9px;font-weight:bold;cursor:pointer;font-size:15px}
+.btn:hover{background:#68431e}
+table{border-collapse:collapse;width:100%;background:#fff;box-shadow:0 4px 14px #00000012;border-radius:12px;overflow:hidden}
+th,td{padding:13px;border-bottom:1px solid #e7dfd2;text-align:left}
+th{background:#946126;color:white}
+.sources{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 14px #00000012}
+.sources a{color:#795022;word-break:break-word}
+footer{background:#49321f;color:white;text-align:center;padding:25px 14px}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:30;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:#fff;width:min(100%,520px);padding:28px;border-radius:18px;text-align:center;box-shadow:0 10px 30px #0005}
+.modal-box h2{color:#74502d}
+.close{background:#946126;color:#fff;border:0;border-radius:8px;padding:10px 22px;cursor:pointer}
+@media(max-width:600px){header{padding:42px 15px}nav a{font-size:14px;margin:5px}.card{padding:20px}th,td{padding:9px 6px;font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 Природные явления</h1>
+<p>☀️ Засуха · 🌨️ Метель · 🌊 Наводнение</p>
+</header>
+
+<nav>
+<a href="#home">Главная</a>
+<a href="#drought">Засуха</a>
+<a href="#blizzard">Метель</a>
+<a href="#flood">Наводнение</a>
+<a href="#safety">Безопасность</a>
+<a href="#sources">Источники</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>Изучаем природные явления</h2>
+<p>Здесь можно узнать, как возникают засуха, метель и наводнение, где они бывают и как защититься от их последствий. Во время опасной погоды важно следить за официальными предупреждениями и слушать взрослых и экстренные службы.</p>
+</section>
+
+<section id="drought">
+<h2 class="section-title">☀️ Засуха</h2>
+<div class="grid">
+<div class="card"><h3>Что это?</h3><p>Засуха — это длительный период, когда осадков меньше обычного и людям, растениям и животным начинает не хватать воды.</p></div>
+<div class="card"><h3>Как появляется?</h3><p>Долгое время выпадает мало дождя или снега. Жара и ветер усиливают испарение, почва высыхает, а запасы воды могут уменьшаться.</p></div>
+<div class="card"><h3>Где бывает?</h3><p>Засухи случаются во многих странах, например в Казахстане, Австралии, США, Испании, Индии и некоторых регионах Африки.</p></div>
+<div class="card"><h3>Последствия</h3><p>Может снизиться урожай, пересыхают почва и водоёмы, животным и растениям становится труднее находить воду.</p></div>
+</div>
+<div class="safe" style="margin-top:20px">
+<h3>🛡️ Как уменьшить последствия засухи</h3>
+<p>Экономь воду, закрывай кран, когда вода не нужна, следуй местным правилам водопользования. В жару делай перерывы в прохладном месте и соблюдай правила пожарной безопасности.</p>
+<button class="btn" onclick="showTip('drought')">💡 Совет по засухе</button>
+</div>
+</section>
+
+<section id="blizzard">
+<h2 class="section-title">🌨️ Метель</h2>
+<div class="grid">
+<div class="card"><h3>Что это?</h3><p>Метель — это погодное явление, при котором сильный ветер переносит снег и ухудшает видимость.</p></div>
+<div class="card"><h3>Как появляется?</h3><p>Во время снегопада или после него усиливается ветер. Он переносит падающие снежинки или поднимает уже лежащий на земле снег.</p></div>
+<div class="card"><h3>Где бывает?</h3><p>Метель встречается в холодных регионах, например в Казахстане, России, Канаде, США, Монголии и странах Северной Европы.</p></div>
+<div class="card"><h3>Чем опасна?</h3><p>Из-за плохой видимости можно потеряться, дороги становятся опасными, а холод и ветер могут привести к переохлаждению.</p></div>
+</div>
+<div class="safe" style="margin-top:20px">
+<h3>🛡️ Как защититься от метели</h3>
+<p>Следи за прогнозом погоды. Во время сильной метели лучше оставаться в помещении. Если ты на улице, постарайся зайти в безопасное здание и сообщи взрослым, где находишься. Одевайся тепло и не отправляйся в дорогу, если службы предупреждают об опасности.</p>
+<button class="btn" onclick="showTip('blizzard')">💡 Совет при метели</button>
+</div>
+</section>
+
+<section id="flood">
+<h2 class="section-title">🌊 Наводнение</h2>
+<p style="text-align:center;max-width:900px;margin:0 auto 28px">Наводнение — это затопление местности водой, которая выходит из берегов рек и водоёмов или скапливается там, где её обычно нет.</p>
+<div class="grid">
+<div class="card"><h3>🌧️ Сильные дожди</h3><p>Если дождя очень много, почва и водостоки не успевают принять всю воду.</p></div>
+<div class="card"><h3>🏞️ Разлив рек</h3><p>Уровень воды в реке может подняться после осадков или быстрого таяния снега.</p></div>
+<div class="card"><h3>❄️ Таяние снега</h3><p>Быстрое таяние может принести в реки и водоёмы много воды за короткое время.</p></div>
+<div class="card"><h3>🌊 Штормы</h3><p>На побережьях шторм и сильный ветер могут нагонять морскую воду на сушу.</p></div>
+</div>
+<h3 style="color:#74502d;margin-top:30px">🔄 Как развивается наводнение</h3>
+<div class="steps">
+<div class="step"><strong>1. Поступает много воды.</strong><p>Сильные дожди, таяние снега или шторм приносят больше воды, чем местность может принять.</p></div>
+<div class="step"><strong>2. Вода поднимается.</strong><p>Реки могут выйти из берегов, а вода начинает скапливаться на улицах и низких участках.</p></div>
+<div class="step"><strong>3. Затапливается территория.</strong><p>Под водой могут оказаться дороги, поля, дворы и здания.</p></div>
+</div>
+<h3 style="color:#74502d;margin-top:30px">🌍 Где бывают наводнения</h3>
+<p>Наводнения возможны почти в любой стране. Они происходят, например, в Казахстане, России, Китае, Индии, Бангладеш, Пакистане, США и странах Европы. В Казахстане весенние паводки могут возникать при быстром таянии снега и подъёме уровня рек.</p>
+<div class="safe" style="margin-top:20px">
+<h3>🛡️ Как защититься от наводнения</h3>
+<p>Если власти предупреждают об опасности, выполняй указания взрослых и экстренных служб. При необходимости уходи на возвышенность. Не ходи и не езди через затопленные участки: вода может быть глубокой и быстро двигаться. Не приближайся к упавшим проводам или мокрому электрооборудованию.</p>
+<button class="btn" onclick="showTip('flood')">💡 Совет при наводнении</button>
+</div>
+</section>
+
+<section id="safety">
+<h2 class="section-title">🧭 Общие правила безопасности</h2>
+<div class="grid">
+<div class="card"><h3>📢 Следи за предупреждениями</h3><p>Проверяй сообщения официальных служб погоды и местных властей.</p></div>
+<div class="card"><h3>👨‍👩‍👧 Слушай взрослых</h3><p>Заранее узнай у семьи и учителей, куда идти при опасной погоде.</p></div>
+<div class="card"><h3>🚫 Не рискуй</h3><p>Не приближайся к опасным участкам и не игнорируй указания экстренных служб.</p></div>
+</div>
+</section>
+
+<section id="sources">
+<h2 class="section-title">📚 Полезные источники</h2>
+<div class="sources">
+<p><a href="https://wmo.int/themes/drought" target="_blank" rel="noopener">Всемирная метеорологическая организация — засуха</a></p>
+<p><a href="https://www.weather.gov/safety/winter-snow" target="_blank" rel="noopener">Национальная метеорологическая служба США — зимняя погода и снег</a></p>
+<p><a href="https://www.ready.gov/floods" target="_blank" rel="noopener">Ready.gov — безопасность при наводнении</a></p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Школьный проект о природных явлениях</p>
+<p>Береги себя и следи за официальными предупреждениями 🌍</p>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="tipTitle">
+<div class="modal-box">
+<h2 id="tipTitle">💡 Совет</h2>
+<p id="tipText"></p>
+<button class="close" onclick="closeTip()">Закрыть</button>
+</div>
+</div>
+
+<script>
+function showTip(type){
+  const title=document.getElementById("tipTitle");
+  const text=document.getElementById("tipText");
+  const tips={
+    drought:["☀️ Совет при засухе","Экономь воду и следуй местным рекомендациям. В жару отдыхай в прохладном месте, а при угрозе пожара выполняй указания взрослых и служб."],
+    blizzard:["🌨️ Совет при метели","При сильной метели лучше оставаться в помещении. Следи за официальными предупреждениями, тепло одевайся и не отправляйся в дорогу, если это небезопасно."],
+    flood:["🌊 Совет при наводнении","Следуй официальным предупреждениям и уходи на возвышенность, если это рекомендовано. Не ходи и не езди через затопленные участки — вода может быть глубокой и быстро двигаться."]
+  };
+  title.textContent=tips[type][0];
+  text.textContent=tips[type][1];
+  document.getElementById("modal").style.display="flex";
+}
+function closeTip(){document.getElementById("modal").style.display="none";}
+document.getElementById("modal").addEventListener("click",function(e){if(e.target===this)closeTip();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeTip();});
+</script>
+</body>
+</html>
